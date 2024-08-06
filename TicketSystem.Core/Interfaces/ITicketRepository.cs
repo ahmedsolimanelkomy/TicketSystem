@@ -9,6 +9,6 @@ namespace TicketSystem.Core.Interfaces
 {
     internal interface ITicketRepository : IRepository<Ticket>
     {
-
+        Task<Ticket> GetByUserMobileNumberAsync(string mobileNumber);
     }
 }

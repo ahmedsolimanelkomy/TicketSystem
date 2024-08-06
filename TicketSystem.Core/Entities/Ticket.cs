@@ -15,7 +15,7 @@ namespace TicketSystem.Core.Entities
         [Required]
         public string TicketNumber { get; set; }
         [DataType(DataType.ImageUrl)]
-        public string TicketImage { get; set; }
+        public string TicketImageUrl { get; set; }
         [ForeignKey("User")]
         public int UserId { get; set; }
         public User User { get; set; }
