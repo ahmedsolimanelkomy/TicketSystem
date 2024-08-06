@@ -11,7 +11,7 @@ using TicketSystem.Core.Entities;
 
 namespace TicketSystem.Application.Mappings
 {
-    internal class MappingProfile : Profile
+    public class MappingProfile : Profile
     {
             public MappingProfile()
             {

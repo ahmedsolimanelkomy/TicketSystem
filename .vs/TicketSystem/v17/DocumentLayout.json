@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{07E896DC-A1B0-42A6-9013-B8AAC9BFF278}|TicketSystem.API\\TicketSystem.API.csproj|c:\\users\\ahmed\\desktop\\cyrus task\\ticketsystem.core\\ticketsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07E896DC-A1B0-42A6-9013-B8AAC9BFF278}|TicketSystem.API\\TicketSystem.API.csproj|solutionrelative:ticketsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{011DFB72-7964-4405-B94B-EC426CABC4C1}|TicketSystem.Application\\TicketSystem.Application.csproj|c:\\users\\ahmed\\desktop\\cyrus task\\ticketsystem.core\\ticketsystem.application\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{011DFB72-7964-4405-B94B-EC426CABC4C1}|TicketSystem.Application\\TicketSystem.Application.csproj|solutionrelative:ticketsystem.application\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,6 +47,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Application\\Mappings\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "TicketSystem.Application\\Mappings\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Application\\Mappings\\MappingProfile.cs",
+              "RelativeToolTip": "TicketSystem.Application\\Mappings\\MappingProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBAAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T23:06:49.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.API\\Program.cs",
+              "RelativeDocumentMoniker": "TicketSystem.API\\Program.cs",
+              "ToolTip": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.API\\Program.cs",
+              "RelativeToolTip": "TicketSystem.API\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T23:00:55.797Z",
+              "EditorCaption": ""
             }
           ]
         }

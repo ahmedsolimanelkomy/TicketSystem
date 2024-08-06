@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TicketSystem.Application.Interfaces
 {
-    internal interface IUserService
+    public interface IUserService
     {
     }
 }

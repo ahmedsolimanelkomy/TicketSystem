@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace TicketSystem.Application.DTOs
 {
-    internal class CreateTicketDTO
+    public class CreateTicketDTO
     {
+        public string MobileNumber { get; set; }
+        public string TicketImageUrl { get; set; }
     }
 }
