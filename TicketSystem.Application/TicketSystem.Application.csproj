@@ -12,4 +12,8 @@
     <Folder Include="Queries\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TicketSystem.Core\TicketSystem.Core.csproj" />
+  </ItemGroup>
+
 </Project>

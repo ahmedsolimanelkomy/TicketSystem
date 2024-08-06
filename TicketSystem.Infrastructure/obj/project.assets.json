@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "TicketSystem.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/TicketSystem.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TicketSystem.Core.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "TicketSystem.Core/1.0.0": {
+      "type": "project",
+      "path": "../TicketSystem.Core/TicketSystem.Core.csproj",
+      "msbuildProject": "../TicketSystem.Core/TicketSystem.Core.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "TicketSystem.Core >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\ahmed\\.nuget\\packages\\": {},
@@ -39,7 +58,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Core\\TicketSystem.Core.csproj": {
+              "projectPath": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Core\\TicketSystem.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
