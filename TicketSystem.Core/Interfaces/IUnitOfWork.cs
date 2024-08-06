@@ -8,5 +8,9 @@ namespace TicketSystem.Core.Interfaces
 {
     internal interface IUnitOfWork
     {
+        IUserRepository Users { get; }
+        ITicketRepository Tickets { get; }
+        IRepository<T> GetRepository<T>() where T : class;
+        Task<int> SaveAsync();
     }
 }
