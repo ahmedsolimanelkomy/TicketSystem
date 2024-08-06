@@ -10,7 +10,6 @@ namespace TicketSystem.Core.Interfaces
     {
         IUserRepository Users { get; }
         ITicketRepository Tickets { get; }
-        IRepository<T> GetRepository<T>() where T : class;
-        Task<int> SaveAsync();
+        Task<int> CompleteAsync();
     }
 }
