@@ -1,0 +1,16 @@
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem.Core\TicketSystem.Application\bin\Debug\net8.0\TicketSystem.Application.deps.json
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem.Core\TicketSystem.Application\bin\Debug\net8.0\TicketSystem.Application.dll
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem.Core\TicketSystem.Application\bin\Debug\net8.0\TicketSystem.Application.pdb
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem.Core\TicketSystem.Application\bin\Debug\net8.0\TicketSystem.Core.dll
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem.Core\TicketSystem.Application\bin\Debug\net8.0\TicketSystem.Core.pdb
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem.Core\TicketSystem.Application\obj\Debug\net8.0\TicketSystem.Application.csproj.AssemblyReference.cache
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem.Core\TicketSystem.Application\obj\Debug\net8.0\TicketSystem.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem.Core\TicketSystem.Application\obj\Debug\net8.0\TicketSystem.Application.AssemblyInfoInputs.cache
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem.Core\TicketSystem.Application\obj\Debug\net8.0\TicketSystem.Application.AssemblyInfo.cs
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem.Core\TicketSystem.Application\obj\Debug\net8.0\TicketSystem.Application.csproj.CoreCompileInputs.cache
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem.Core\TicketSystem.Application\obj\Debug\net8.0\TicketSystem.Application.sourcelink.json
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem.Core\TicketSystem.Application\obj\Debug\net8.0\TicketSy.5C6B7014.Up2Date
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem.Core\TicketSystem.Application\obj\Debug\net8.0\TicketSystem.Application.dll
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem.Core\TicketSystem.Application\obj\Debug\net8.0\refint\TicketSystem.Application.dll
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem.Core\TicketSystem.Application\obj\Debug\net8.0\TicketSystem.Application.pdb
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem.Core\TicketSystem.Application\obj\Debug\net8.0\ref\TicketSystem.Application.dll

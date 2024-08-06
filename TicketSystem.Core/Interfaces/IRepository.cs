@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TicketSystem.Core.Interfaces
 {
-    internal interface IRepository<T> where T : class
+    public interface IRepository<T> where T : class
     {
         Task<IEnumerable<T>> GetAllAsync(string[]? includeProperties = null);
         Task<T> GetAsync(Expression<Func<T, bool>> filter, string[]? includeProperties = null);

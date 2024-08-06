@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TicketSystem.Core.Interfaces
 {
-    internal interface IUnitOfWork
+    public interface IUnitOfWork
     {
         IUserRepository Users { get; }
         ITicketRepository Tickets { get; }

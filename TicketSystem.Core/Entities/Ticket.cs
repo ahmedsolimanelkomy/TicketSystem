@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace TicketSystem.Core.Entities
 {
-    internal class Ticket
+    public class Ticket
     {
         [Key]
         public int Id { get; set; }
