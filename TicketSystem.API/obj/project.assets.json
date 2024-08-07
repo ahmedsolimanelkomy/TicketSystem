@@ -5305,8 +5305,7 @@
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.7",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.7",
       "Swashbuckle.AspNetCore >= 6.4.0",
-      "TicketSystem.Application >= 1.0.0",
-      "TicketSystem.Infrastructure >= 1.0.0"
+      "TicketSystem.Application >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5344,9 +5343,6 @@
           "projectReferences": {
             "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Application\\TicketSystem.Application.csproj": {
               "projectPath": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Application\\TicketSystem.Application.csproj"
-            },
-            "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Infrastructure\\TicketSystem.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Infrastructure\\TicketSystem.Infrastructure.csproj"
             }
           }
         }

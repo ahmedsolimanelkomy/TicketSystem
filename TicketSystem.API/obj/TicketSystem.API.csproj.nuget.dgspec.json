@@ -35,9 +35,6 @@
             "projectReferences": {
               "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Application\\TicketSystem.Application.csproj": {
                 "projectPath": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Application\\TicketSystem.Application.csproj"
-              },
-              "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Infrastructure\\TicketSystem.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Infrastructure\\TicketSystem.Infrastructure.csproj"
               }
             }
           }
