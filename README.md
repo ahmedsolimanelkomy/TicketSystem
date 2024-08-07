@@ -11,7 +11,7 @@ The project also incorporates JWT authentication for admin users and provides Sw
 
 ### 🎟 Ticket Creation
 - Create tickets using the user's mobile number.
-- Save ticket images as JPEG files (converted from HTML strings).
+- Save ticket images as JPEG.
 - Ensure each user has only one ticket.
 
 ### 📜 Ticket Retrieval
