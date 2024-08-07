@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.API\\wwwroot\\TicketImages\\caa5ff6a-763e-4a9e-b866-353ac9de6b4a.png",
+      "PackagePath": "staticwebassets\\TicketImages\\caa5ff6a-763e-4a9e-b866-353ac9de6b4a.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TicketSystem.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.TicketSystem.API.props",
+      "PackagePath": "build\\TicketSystem.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.TicketSystem.API.props",
+      "PackagePath": "buildMultiTargeting\\TicketSystem.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.TicketSystem.API.props",
+      "PackagePath": "buildTransitive\\TicketSystem.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,11 +1,39 @@
 {
   "Version": 1,
-  "Hash": "Tt15OtdE3ZURJSmwLVYjznYpFm9b0k8Z7lDFcF18d1Y=",
+  "Hash": "iscPFZlqCiaqraU9HiF4imGd20zQQCaS/2Bu4+LMBe4=",
   "Source": "TicketSystem.API",
   "BasePath": "_content/TicketSystem.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "TicketSystem.API\\wwwroot",
+      "Source": "TicketSystem.API",
+      "ContentRoot": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.API\\wwwroot\\",
+      "BasePath": "_content/TicketSystem.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.API\\wwwroot\\TicketImages\\caa5ff6a-763e-4a9e-b866-353ac9de6b4a.png",
+      "SourceId": "TicketSystem.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.API\\wwwroot\\",
+      "BasePath": "_content/TicketSystem.API",
+      "RelativePath": "TicketImages/caa5ff6a-763e-4a9e-b866-353ac9de6b4a.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\TicketImages\\caa5ff6a-763e-4a9e-b866-353ac9de6b4a.png"
+    }
+  ]
 }

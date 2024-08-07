@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TicketSystem.Application.DTOs;
 using TicketSystem.Application.Interfaces;
 using TicketSystem.Core.Entities;
 using TicketSystem.Core.Interfaces;
@@ -21,7 +22,12 @@ namespace TicketSystem.Application.Commands.CreateTicket
 
         public async Task Handle(CreateTicketCommand request, CancellationToken cancellationToken)
         {
-            await _ticketService.CreateTicketAsync(request.CreateTicketDto);
+            CreateTicketDTO createTicketDTO = new CreateTicketDTO()
+            {
+                MobileNumber = request.MobileNumber,
+                TicketImage = request.TicketImage,
+            };
+            await _ticketService.CreateTicketAsync(createTicketDTO);
         }
     }
 

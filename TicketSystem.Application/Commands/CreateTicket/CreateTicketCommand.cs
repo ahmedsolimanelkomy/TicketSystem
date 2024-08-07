@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,11 +11,15 @@ namespace TicketSystem.Application.Commands.CreateTicket
 {
     public class CreateTicketCommand : IRequest
     {
-        public CreateTicketDTO CreateTicketDto { get; }
+        public string MobileNumber { get; set; }
+        public IFormFile TicketImage { get; set; }
 
-        public CreateTicketCommand(CreateTicketDTO createTicketDto)
+        public CreateTicketCommand() { }
+
+        public CreateTicketCommand(string mobileNumber, IFormFile ticketImage)
         {
-            CreateTicketDto = createTicketDto;
+            MobileNumber = mobileNumber;
+            TicketImage = ticketImage;
         }
     }
 }

@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{011DFB72-7964-4405-B94B-EC426CABC4C1}|TicketSystem.Application\\TicketSystem.Application.csproj|C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\ticketsystem.application\\services\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{011DFB72-7964-4405-B94B-EC426CABC4C1}|TicketSystem.Application\\TicketSystem.Application.csproj|solutionrelative:ticketsystem.application\\services\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{07E896DC-A1B0-42A6-9013-B8AAC9BFF278}|TicketSystem.API\\TicketSystem.API.csproj|c:\\users\\ahmed\\desktop\\cyrus task\\ticketsystem.core\\ticketsystem.api\\controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07E896DC-A1B0-42A6-9013-B8AAC9BFF278}|TicketSystem.API\\TicketSystem.API.csproj|solutionrelative:ticketsystem.api\\controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{011DFB72-7964-4405-B94B-EC426CABC4C1}|TicketSystem.Application\\TicketSystem.Application.csproj|c:\\users\\ahmed\\desktop\\cyrus task\\ticketsystem.core\\ticketsystem.application\\services\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{011DFB72-7964-4405-B94B-EC426CABC4C1}|TicketSystem.Application\\TicketSystem.Application.csproj|solutionrelative:ticketsystem.application\\services\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{07E896DC-A1B0-42A6-9013-B8AAC9BFF278}|TicketSystem.API\\TicketSystem.API.csproj|c:\\users\\ahmed\\desktop\\cyrus task\\ticketsystem.core\\ticketsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{07E896DC-A1B0-42A6-9013-B8AAC9BFF278}|TicketSystem.API\\TicketSystem.API.csproj|C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\ticketsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07E896DC-A1B0-42A6-9013-B8AAC9BFF278}|TicketSystem.API\\TicketSystem.API.csproj|solutionrelative:ticketsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{226B7195-05DD-4B5E-B07F-E32CDC5304F9}|TicketSystem.Core\\TicketSystem.Core.csproj|c:\\users\\ahmed\\desktop\\cyrus task\\ticketsystem.core\\ticketsystem.core\\entities\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{226B7195-05DD-4B5E-B07F-E32CDC5304F9}|TicketSystem.Core\\TicketSystem.Core.csproj|solutionrelative:ticketsystem.core\\entities\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{011DFB72-7964-4405-B94B-EC426CABC4C1}|TicketSystem.Application\\TicketSystem.Application.csproj|c:\\users\\ahmed\\desktop\\cyrus task\\ticketsystem.core\\ticketsystem.application\\commands\\createticket\\createticketcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{011DFB72-7964-4405-B94B-EC426CABC4C1}|TicketSystem.Application\\TicketSystem.Application.csproj|solutionrelative:ticketsystem.application\\commands\\createticket\\createticketcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Infrastructure\\Migrations\\20240807013051_ticketNumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TicketSystem.Infrastructure\\Migrations\\20240807013051_ticketNumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{011DFB72-7964-4405-B94B-EC426CABC4C1}|TicketSystem.Application\\TicketSystem.Application.csproj|c:\\users\\ahmed\\desktop\\cyrus task\\ticketsystem.core\\ticketsystem.application\\commands\\createticket\\createticketcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{011DFB72-7964-4405-B94B-EC426CABC4C1}|TicketSystem.Application\\TicketSystem.Application.csproj|solutionrelative:ticketsystem.application\\commands\\createticket\\createticketcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{011DFB72-7964-4405-B94B-EC426CABC4C1}|TicketSystem.Application\\TicketSystem.Application.csproj|c:\\users\\ahmed\\desktop\\cyrus task\\ticketsystem.core\\ticketsystem.application\\dtos\\ticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{011DFB72-7964-4405-B94B-EC426CABC4C1}|TicketSystem.Application\\TicketSystem.Application.csproj|solutionrelative:ticketsystem.application\\dtos\\ticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{011DFB72-7964-4405-B94B-EC426CABC4C1}|TicketSystem.Application\\TicketSystem.Application.csproj|c:\\users\\ahmed\\desktop\\cyrus task\\ticketsystem.core\\ticketsystem.application\\dtos\\createticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{011DFB72-7964-4405-B94B-EC426CABC4C1}|TicketSystem.Application\\TicketSystem.Application.csproj|solutionrelative:ticketsystem.application\\dtos\\createticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,65 +66,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "20240807013051_ticketNumber.cs",
-              "DocumentMoniker": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Infrastructure\\Migrations\\20240807013051_ticketNumber.cs",
-              "RelativeDocumentMoniker": "TicketSystem.Infrastructure\\Migrations\\20240807013051_ticketNumber.cs",
-              "ToolTip": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Infrastructure\\Migrations\\20240807013051_ticketNumber.cs",
-              "RelativeToolTip": "TicketSystem.Infrastructure\\Migrations\\20240807013051_ticketNumber.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAWAAAA",
+              "DocumentIndex": 5,
+              "Title": "CreateTicketDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Application\\DTOs\\CreateTicketDTO.cs",
+              "RelativeDocumentMoniker": "TicketSystem.Application\\DTOs\\CreateTicketDTO.cs",
+              "ToolTip": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Application\\DTOs\\CreateTicketDTO.cs",
+              "RelativeToolTip": "TicketSystem.Application\\DTOs\\CreateTicketDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAwAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T01:30:51.231Z",
+              "WhenOpened": "2024-08-07T13:56:57.395Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Ticket.cs",
-              "DocumentMoniker": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Core\\Entities\\Ticket.cs",
-              "RelativeDocumentMoniker": "TicketSystem.Core\\Entities\\Ticket.cs",
-              "ToolTip": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Core\\Entities\\Ticket.cs",
-              "RelativeToolTip": "TicketSystem.Core\\Entities\\Ticket.cs",
-              "ViewState": "AQIAAAYAAABgZmZmZmYkwA4AAAAAAAAA",
+              "Title": "CreateTicketCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Application\\Commands\\CreateTicket\\CreateTicketCommandHandler.cs",
+              "RelativeDocumentMoniker": "TicketSystem.Application\\Commands\\CreateTicket\\CreateTicketCommandHandler.cs",
+              "ToolTip": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Application\\Commands\\CreateTicket\\CreateTicketCommandHandler.cs",
+              "RelativeToolTip": "TicketSystem.Application\\Commands\\CreateTicket\\CreateTicketCommandHandler.cs",
+              "ViewState": "AQIAAA0AAACAMzMzMzMLwB8AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T01:28:11.024Z",
+              "WhenOpened": "2024-08-07T13:55:42.057Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TicketDTO.cs",
-              "DocumentMoniker": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Application\\DTOs\\TicketDTO.cs",
-              "RelativeDocumentMoniker": "TicketSystem.Application\\DTOs\\TicketDTO.cs",
-              "ToolTip": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Application\\DTOs\\TicketDTO.cs",
-              "RelativeToolTip": "TicketSystem.Application\\DTOs\\TicketDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAyAAAA",
+              "DocumentIndex": 4,
+              "Title": "CreateTicketCommand.cs",
+              "DocumentMoniker": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Application\\Commands\\CreateTicket\\CreateTicketCommand.cs",
+              "RelativeDocumentMoniker": "TicketSystem.Application\\Commands\\CreateTicket\\CreateTicketCommand.cs",
+              "ToolTip": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Application\\Commands\\CreateTicket\\CreateTicketCommand.cs",
+              "RelativeToolTip": "TicketSystem.Application\\Commands\\CreateTicket\\CreateTicketCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T01:16:35.35Z",
+              "WhenOpened": "2024-08-07T13:53:38.773Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "TicketService.cs",
               "DocumentMoniker": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Application\\Services\\TicketService.cs",
               "RelativeDocumentMoniker": "TicketSystem.Application\\Services\\TicketService.cs",
               "ToolTip": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Application\\Services\\TicketService.cs",
               "RelativeToolTip": "TicketSystem.Application\\Services\\TicketService.cs",
-              "ViewState": "AQIAAA4AAAAgAAAAAAA5wB8AAAAvAAAA",
+              "ViewState": "AQIAAEIAAAAAzczMzMwmwEoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-07T00:48:06.301Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TicketsController.cs",
               "DocumentMoniker": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.API\\Controllers\\TicketsController.cs",
               "RelativeDocumentMoniker": "TicketSystem.API\\Controllers\\TicketsController.cs",
               "ToolTip": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.API\\Controllers\\TicketsController.cs",
               "RelativeToolTip": "TicketSystem.API\\Controllers\\TicketsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAzAAAA",
+              "ViewState": "AQIAABIAAADAmZmZmZklwBwAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-06T23:47:28.584Z",
               "EditorCaption": ""
@@ -137,7 +137,7 @@
               "RelativeDocumentMoniker": "TicketSystem.API\\Program.cs",
               "ToolTip": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.API\\Program.cs",
               "RelativeToolTip": "TicketSystem.API\\Program.cs",
-              "ViewState": "AQIAABkAAABAAAAAAAAQwCEAAAAUAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEsAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-06T23:00:55.797Z",
               "EditorCaption": ""

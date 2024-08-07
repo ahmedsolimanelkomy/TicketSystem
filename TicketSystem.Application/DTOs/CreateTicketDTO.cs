@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,6 @@ namespace TicketSystem.Application.DTOs
     public class CreateTicketDTO
     {
         public string MobileNumber { get; set; }
-        public string TicketImageUrl { get; set; }
+        public IFormFile TicketImage { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ using TicketSystem.Application.DTOs;
 using TicketSystem.Application.Interfaces;
 using TicketSystem.Core.Entities;
 using TicketSystem.Core.Interfaces;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace TicketSystem.Application.Services
 {
@@ -27,10 +29,31 @@ namespace TicketSystem.Application.Services
         {
             User user = await _unitOfWork.Users.GetByMobileNumberAsync(createTicketDto.MobileNumber);
             if (user == null) throw new Exception("User not found");
-            if (user.Ticket != null) throw new Exception("User Already Has a Ticket");
-            Ticket ticket = _mapper.Map<Ticket>(createTicketDto);
+
+            var ticket = _mapper.Map<Ticket>(createTicketDto);
             ticket.TicketNumber = Guid.NewGuid().ToString();
-            ticket.User = user;
+            ticket.UserId = user.Id;
+
+            var imageFilePath = Path.Combine("wwwroot/TicketImages", ticket.TicketNumber + ".Jpeg");
+
+            using (var stream = new MemoryStream())
+            {
+                await createTicketDto.TicketImage.CopyToAsync(stream);
+                using (var image = System.Drawing.Image.FromStream(stream))
+                {
+                    var jpegEncoder = GetEncoder(System.Drawing.Imaging.ImageFormat.Jpeg);
+                    var encoderParameters = new System.Drawing.Imaging.EncoderParameters(1);
+                    encoderParameters.Param[0] = new System.Drawing.Imaging.EncoderParameter(System.Drawing.Imaging.Encoder.Quality, 90L); // Adjust quality as needed
+
+                    using (var fileStream = new FileStream(imageFilePath, FileMode.Create))
+                    {
+                        image.Save(fileStream, jpegEncoder, encoderParameters);
+                    }
+                }
+            }
+
+            ticket.TicketImageUrl = imageFilePath;
+
             await _unitOfWork.Tickets.AddAsync(ticket);
             await _unitOfWork.CompleteAsync();
         }
@@ -48,13 +71,17 @@ namespace TicketSystem.Application.Services
             return TicketsDto;
         }
 
-        private string GenerateRandomNumber()
+        private static System.Drawing.Imaging.ImageCodecInfo GetEncoder(System.Drawing.Imaging.ImageFormat format)
         {
-            var timestamp = DateTime.UtcNow.ToString("yyyyMMddHHmmss");
-            var random = new Random();
-            var randomNumber = random.Next(1000, 9999);
-            string Number = $"{timestamp}-{randomNumber}";
-            return Number;
+            var codecs = System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders();
+            foreach (var codec in codecs)
+            {
+                if (codec.FormatID == format.Guid)
+                {
+                    return codec;
+                }
+            }
+            return null;
         }
     }
 }

@@ -20,7 +20,7 @@ namespace TicketSystem.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(CreateTicketCommand command)
+        public async Task<IActionResult> Create([FromForm] CreateTicketCommand command)
         {
             try
             {
@@ -39,8 +39,9 @@ namespace TicketSystem.API.Controllers
             var tickets = await _mediator.Send(query);
             return Ok(tickets);
         }
-        [HttpGet("GetUserTickets")]
-        public async Task<IActionResult> GetUserTickets([FromQuery] string mobileNumber)
+
+        [HttpGet("GetUserTicket")]
+        public async Task<IActionResult> GetUserTicket([FromQuery] string mobileNumber)
         {
             var query = new GetUserTicketQuery(mobileNumber);
             var tickets = await _mediator.Send(query);

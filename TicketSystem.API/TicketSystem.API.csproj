@@ -19,4 +19,9 @@
     <ProjectReference Include="..\TicketSystem.Infrastructure\TicketSystem.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="wwwroot\TicketImages\" />
+  </ItemGroup>
+
 </Project>

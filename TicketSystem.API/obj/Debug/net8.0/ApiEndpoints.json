@@ -8,9 +8,14 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "command",
-        "Type": "TicketSystem.Application.Commands.CreateTicket.CreateTicketCommand",
-        "IsRequired": true
+        "Name": "MobileNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TicketImage",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -27,8 +32,8 @@
   },
   {
     "ContainingType": "TicketSystem.API.Controllers.TicketsController",
-    "Method": "GetUserTickets",
-    "RelativePath": "api/Tickets/GetUserTickets",
+    "Method": "GetUserTicket",
+    "RelativePath": "api/Tickets/GetUserTicket",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
