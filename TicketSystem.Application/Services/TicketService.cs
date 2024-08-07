@@ -59,7 +59,7 @@ namespace TicketSystem.Application.Services
         }
         public async Task<IEnumerable<TicketDTO>> GetAllTicketsAsync()
         {
-            IEnumerable<Ticket> Tickets = await _unitOfWork.Tickets.GetAllAsync();
+            IEnumerable<Ticket> Tickets = await _unitOfWork.Tickets.GetAllOrderedByTicketNumberDescAsync();
             IEnumerable<TicketDTO> TicketsDto = _mapper.Map<IEnumerable<TicketDTO>>(Tickets);
             return TicketsDto;
         }

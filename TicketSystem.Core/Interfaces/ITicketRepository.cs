@@ -10,5 +10,7 @@ namespace TicketSystem.Core.Interfaces
     public interface ITicketRepository : IRepository<Ticket>
     {
         Task<Ticket> GetByUserMobileNumberAsync(string mobileNumber);
+        Task<IEnumerable<Ticket>> GetAllOrderedByTicketNumberDescAsync(string[]? includeProperties = null);
+
     }
 }

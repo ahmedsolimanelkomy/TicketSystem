@@ -19,7 +19,7 @@ namespace TicketSystem.API.Controllers
             _mediator = mediator;
         }
 
-        [HttpPost]
+        [HttpPost("AddTicket")]
         public async Task<IActionResult> Create([FromForm] CreateTicketCommand command)
         {
             try
@@ -32,7 +32,7 @@ namespace TicketSystem.API.Controllers
             return Created();
         }
 
-        [HttpGet("GetAllTickets")]
+        [HttpGet("GetAllTicketsDesc")]
         public async Task<IActionResult> GetAllTickets()
         {
             var query = new GetAllTicketsQuery();
