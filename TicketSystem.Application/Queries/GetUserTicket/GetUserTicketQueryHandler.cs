@@ -9,7 +9,7 @@ using TicketSystem.Application.Interfaces;
 
 namespace TicketSystem.Application.Queries.GetUserTicket
 {
-    public class GetUserTicketQueryHandler : IRequestHandler<GetUserTicketQuery, IEnumerable<TicketDTO>>
+    public class GetUserTicketQueryHandler : IRequestHandler<GetUserTicketQuery, TicketDTO>
     {
         private readonly ITicketService _ticketService;
 
@@ -18,7 +18,7 @@ namespace TicketSystem.Application.Queries.GetUserTicket
             _ticketService = ticketService;
         }
 
-        public async Task<IEnumerable<TicketDTO>> Handle(GetUserTicketQuery request, CancellationToken cancellationToken)
+        public async Task<TicketDTO> Handle(GetUserTicketQuery request, CancellationToken cancellationToken)
         {
             return await _ticketService.GetUserTicketByMobileNumberAsync(request.MobileNumber);
         }

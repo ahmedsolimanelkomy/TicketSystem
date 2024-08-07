@@ -12,7 +12,6 @@ namespace TicketSystem.Core.Entities
     {
         [Key]
         public int Id { get; set; }
-        [Required]
         public string TicketNumber { get; set; }
         [DataType(DataType.ImageUrl)]
         public string TicketImageUrl { get; set; }

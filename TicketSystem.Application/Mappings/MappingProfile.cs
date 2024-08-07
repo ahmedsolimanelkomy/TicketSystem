@@ -15,8 +15,9 @@ namespace TicketSystem.Application.Mappings
     {
             public MappingProfile()
             {
-                CreateMap<User, UserDTO>();
-                CreateMap<Ticket, TicketDTO>();
+                CreateMap<User, UserDTO>().ReverseMap();
+                CreateMap<Ticket, TicketDTO>().ReverseMap();
+                CreateMap<CreateTicketDTO, Ticket>().ReverseMap();
             }
     }
 }

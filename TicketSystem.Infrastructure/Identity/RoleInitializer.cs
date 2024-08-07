@@ -26,7 +26,7 @@ namespace TicketSystem.Infrastructure.Identity
             {
                 if (!await _roleManager.RoleExistsAsync(role))
                 {
-                    await _roleManager.CreateAsync(new ApplicationRole(role));
+                    await _roleManager.CreateAsync(new ApplicationRole() { Name = role});
                 }
             }
 

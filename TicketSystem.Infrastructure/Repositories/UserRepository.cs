@@ -19,7 +19,7 @@ namespace TicketSystem.Infrastructure.Repositories
                 throw new ArgumentException("Mobile number cannot be null or empty.", nameof(mobileNumber));
             }
 
-            var user = await _context.Users
+            var user = await _context.Users.Include("Ticket")
                 .FirstOrDefaultAsync(u => u.MobileNumber == mobileNumber);
 
             return user;

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TicketSystem.Infrastructure.Identity
 {
-    public class ApplicationRole(string role) : IdentityRole(role)
+    public class ApplicationRole : IdentityRole
     {
 
     }

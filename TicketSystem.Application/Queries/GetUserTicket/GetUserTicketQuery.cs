@@ -8,7 +8,7 @@ using TicketSystem.Application.DTOs;
 
 namespace TicketSystem.Application.Queries.GetUserTicket
 {
-    public class GetUserTicketQuery : IRequest<IEnumerable<TicketDTO>>
+    public class GetUserTicketQuery : IRequest<TicketDTO>
     {
         public string MobileNumber { get; }
 
