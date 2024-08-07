@@ -1,8 +1,40 @@
 [
   {
+    "ContainingType": "TicketSystem.API.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "TicketSystem.Application.DTOs.LoginRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicketSystem.API.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/Auth/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "TicketSystem.Application.DTOs.RegisterRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "TicketSystem.API.Controllers.TicketsController",
     "Method": "Create",
-    "RelativePath": "api/Tickets",
+    "RelativePath": "api/Tickets/AddTicket",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -22,8 +54,8 @@
   },
   {
     "ContainingType": "TicketSystem.API.Controllers.TicketsController",
-    "Method": "GetAllTickets",
-    "RelativePath": "api/Tickets/GetAllTickets",
+    "Method": "GetAllTicketsDesc",
+    "RelativePath": "api/Tickets/GetAllTicketsDesc",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

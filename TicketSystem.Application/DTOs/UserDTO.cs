@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TicketSystem.Application.DTOs
 {
-    internal class UserDTO
+    public class UserDTO
     {
         public string Name { get; set; }
         public string MobileNumber { get; set; }

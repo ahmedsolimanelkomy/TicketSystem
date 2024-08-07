@@ -27,50 +27,63 @@ namespace TicketSystem.Application.Services
 
         public async Task CreateTicketAsync(CreateTicketDTO createTicketDto)
         {
-            User user = await _unitOfWork.Users.GetByMobileNumberAsync(createTicketDto.MobileNumber);
-            if (user == null) throw new Exception("User not found");
-
-            var ticket = _mapper.Map<Ticket>(createTicketDto);
-            ticket.TicketNumber = Guid.NewGuid().ToString();
-            ticket.UserId = user.Id;
-
-            var imageFilePath = Path.Combine("wwwroot/TicketImages", ticket.TicketNumber + ".Jpeg");
-
-            using (var stream = new MemoryStream())
+            try
             {
-                await createTicketDto.TicketImage.CopyToAsync(stream);
-                using (var image = System.Drawing.Image.FromStream(stream))
+                if (createTicketDto == null)
                 {
-                    var jpegEncoder = GetEncoder(System.Drawing.Imaging.ImageFormat.Jpeg);
-                    var encoderParameters = new System.Drawing.Imaging.EncoderParameters(1);
-                    encoderParameters.Param[0] = new System.Drawing.Imaging.EncoderParameter(System.Drawing.Imaging.Encoder.Quality, 90L); // Adjust quality as needed
-
-                    using (var fileStream = new FileStream(imageFilePath, FileMode.Create))
-                    {
-                        image.Save(fileStream, jpegEncoder, encoderParameters);
-                    }
+                    throw new ArgumentNullException(nameof(createTicketDto), "CreateTicketDTO cannot be null");
                 }
+
+                User user = await _unitOfWork.Users.GetByMobileNumberAsync(createTicketDto.MobileNumber) ?? throw new KeyNotFoundException("User not found");
+                Ticket ticket = _mapper.Map<Ticket>(createTicketDto);
+                ticket.TicketNumber = Guid.NewGuid().ToString();
+                ticket.UserId = user.Id;
+
+                string imageName = await SaveTicketImageAsync(createTicketDto.TicketImage, ticket.TicketNumber);
+                ticket.TicketImageUrl = imageName;
+
+                await _unitOfWork.Tickets.AddAsync(ticket);
+                await _unitOfWork.CompleteAsync();
             }
-
-            ticket.TicketImageUrl = imageFilePath;
-
-            await _unitOfWork.Tickets.AddAsync(ticket);
-            await _unitOfWork.CompleteAsync();
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while creating the ticket: " + ex.Message, ex);
+            }
         }
         public async Task<IEnumerable<TicketDTO>> GetAllTicketsAsync()
         {
-            IEnumerable<Ticket> Tickets = await _unitOfWork.Tickets.GetAllOrderedByTicketNumberDescAsync();
-            IEnumerable<TicketDTO> TicketsDto = _mapper.Map<IEnumerable<TicketDTO>>(Tickets);
-            return TicketsDto;
+            try
+            {
+                IEnumerable<Ticket> tickets = await _unitOfWork.Tickets.GetAllOrderedByTicketNumberDescAsync();
+                IEnumerable<TicketDTO> ticketDTOs = _mapper.Map<IEnumerable<TicketDTO>>(tickets);
+                return ticketDTOs;
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new Exception("Operation failed: " + ex.Message, ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while retrieving tickets: " + ex.Message, ex);
+            }
         }
-
         public async Task<TicketDTO> GetUserTicketByMobileNumberAsync(string MobileNumber)
         {
-            Ticket Tickets = await _unitOfWork.Tickets.GetAsync(Ticket => Ticket.User.MobileNumber == MobileNumber, ["User"]);
-            TicketDTO TicketsDto = _mapper.Map<TicketDTO>(Tickets);
-            return TicketsDto;
+            try
+            {
+                Ticket Tickets = await _unitOfWork.Tickets.GetAsync(Ticket => Ticket.User.MobileNumber == MobileNumber, ["User"]);
+                TicketDTO TicketsDto = _mapper.Map<TicketDTO>(Tickets);
+                return TicketsDto;
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new Exception("Operation failed: " + ex.Message, ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while retrieving tickets: " + ex.Message, ex);
+            }
         }
-
         private static System.Drawing.Imaging.ImageCodecInfo GetEncoder(System.Drawing.Imaging.ImageFormat format)
         {
             var codecs = System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders();
@@ -82,6 +95,41 @@ namespace TicketSystem.Application.Services
                 }
             }
             return null;
+        }
+        private async Task<string> SaveTicketImageAsync(IFormFile ticketImage, string ticketNumber)
+        {
+            if (ticketImage == null)
+            {
+                throw new ArgumentNullException(nameof(ticketImage), "Ticket image cannot be null");
+            }
+
+            try
+            {
+                var imageName = ticketNumber + ".jpeg";
+                var imageFilePath = Path.Combine("wwwroot/TicketImages", imageName);
+
+                using (var stream = new MemoryStream())
+                {
+                    await ticketImage.CopyToAsync(stream);
+                    using (var image = System.Drawing.Image.FromStream(stream))
+                    {
+                        var jpegEncoder = GetEncoder(System.Drawing.Imaging.ImageFormat.Jpeg);
+                        var encoderParameters = new System.Drawing.Imaging.EncoderParameters(1);
+                        encoderParameters.Param[0] = new System.Drawing.Imaging.EncoderParameter(System.Drawing.Imaging.Encoder.Quality, 90L); // Adjust quality as needed
+
+                        using (var fileStream = new FileStream(imageFilePath, FileMode.Create))
+                        {
+                            image.Save(fileStream, jpegEncoder, encoderParameters);
+                        }
+                    }
+                }
+
+                return imageName;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while saving the ticket image: " + ex.Message, ex);
+            }
         }
     }
 }

@@ -14,3 +14,5 @@ C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem.Core\TicketSystem.Application\obj
 C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem.Core\TicketSystem.Application\obj\Debug\net8.0\refint\TicketSystem.Application.dll
 C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem.Core\TicketSystem.Application\obj\Debug\net8.0\TicketSystem.Application.pdb
 C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem.Core\TicketSystem.Application\obj\Debug\net8.0\ref\TicketSystem.Application.dll
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem.Core\TicketSystem.Application\bin\Debug\net8.0\TicketSystem.Infrastructure.dll
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem.Core\TicketSystem.Application\bin\Debug\net8.0\TicketSystem.Infrastructure.pdb
