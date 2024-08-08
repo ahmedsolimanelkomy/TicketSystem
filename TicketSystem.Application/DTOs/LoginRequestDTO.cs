@@ -9,9 +9,9 @@ namespace TicketSystem.Application.DTOs
 {
     public class LoginRequestDTO
     {
-        [Required, MaxLength(30), EmailAddress]
-        public string Email { get; set; }
-        [Required, MaxLength(30)]
-        public string Password { get; set; }
+        [Required, MaxLength(50), EmailAddress]
+        public string Email { get; set; } = string.Empty;
+        [Required, MaxLength(50)]
+        public string Password { get; set; } = string.Empty;
     }
 }

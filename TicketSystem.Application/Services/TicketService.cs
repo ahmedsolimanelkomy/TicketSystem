@@ -35,15 +35,25 @@ namespace TicketSystem.Application.Services
                 }
 
                 User user = await _unitOfWork.Users.GetByMobileNumberAsync(createTicketDto.MobileNumber) ?? throw new KeyNotFoundException("User not found");
+                
+                if (user.Ticket != null)
+                {
+                    throw new InvalidOperationException("User already has a ticket");
+                }
+
                 Ticket ticket = _mapper.Map<Ticket>(createTicketDto);
                 ticket.TicketNumber = Guid.NewGuid().ToString();
                 ticket.UserId = user.Id;
 
-                string imageName = await SaveTicketImageAsync(createTicketDto.TicketImage, ticket.TicketNumber);
+                string imageName = await SaveTicketImageAsync(createTicketDto?.TicketImage!, ticket.TicketNumber);
                 ticket.TicketImageUrl = imageName;
 
                 await _unitOfWork.Tickets.AddAsync(ticket);
                 await _unitOfWork.CompleteAsync();
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new Exception(ex.Message, ex);
             }
             catch (Exception ex)
             {
@@ -54,7 +64,12 @@ namespace TicketSystem.Application.Services
         {
             try
             {
-                IEnumerable<Ticket> tickets = await _unitOfWork.Tickets.GetAllOrderedByTicketNumberDescAsync();
+                IEnumerable<Ticket?> tickets = await _unitOfWork.Tickets.GetAllOrderedByTicketNumberDescAsync();
+
+                if (tickets == null || !tickets.Any())
+                {
+                    return [];
+                }
                 IEnumerable<TicketDTO> ticketDTOs = _mapper.Map<IEnumerable<TicketDTO>>(tickets);
                 return ticketDTOs;
             }
@@ -67,11 +82,17 @@ namespace TicketSystem.Application.Services
                 throw new Exception("An error occurred while retrieving tickets: " + ex.Message, ex);
             }
         }
-        public async Task<TicketDTO> GetUserTicketByMobileNumberAsync(string MobileNumber)
+        public async Task<TicketDTO?> GetUserTicketByMobileNumberAsync(string MobileNumber)
         {
             try
             {
-                Ticket Tickets = await _unitOfWork.Tickets.GetAsync(Ticket => Ticket.User.MobileNumber == MobileNumber, ["User"]);
+                Ticket? Tickets = await _unitOfWork.Tickets.GetAsync(ticket => ticket.User.MobileNumber == MobileNumber, ["User"]);
+
+                if (Tickets == null)
+                {
+                    return null;
+                }
+
                 TicketDTO TicketsDto = _mapper.Map<TicketDTO>(Tickets);
                 return TicketsDto;
             }
@@ -96,9 +117,9 @@ namespace TicketSystem.Application.Services
             }
             return null;
         }
-        private async Task<string> SaveTicketImageAsync(IFormFile ticketImage, string ticketNumber)
+        private static async Task<string> SaveTicketImageAsync(IFormFile ticketImage, string ticketNumber)
         {
-            if (ticketImage == null)
+            if (ticketImage == null || ticketNumber == null)
             {
                 throw new ArgumentNullException(nameof(ticketImage), "Ticket image cannot be null");
             }

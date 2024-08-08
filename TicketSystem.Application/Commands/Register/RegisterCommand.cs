@@ -11,6 +11,6 @@ namespace TicketSystem.Application.Commands.Register
 {
     public class RegisterCommand : IRequest<IdentityResult>
     {
-        public RegisterRequestDTO Request { get; set; }
+        public required RegisterRequestDTO Request { get; set; }
     }
 }

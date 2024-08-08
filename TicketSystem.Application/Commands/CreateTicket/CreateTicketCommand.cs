@@ -9,10 +9,10 @@ using TicketSystem.Application.DTOs;
 
 namespace TicketSystem.Application.Commands.CreateTicket
 {
-    public class CreateTicketCommand : IRequest
+    public class CreateTicketCommand : IRequest <CreateTicketDTO>
     {
-        public string MobileNumber { get; set; }
-        public IFormFile TicketImage { get; set; }
+        public required string MobileNumber { get; set; }
+        public required IFormFile TicketImage { get; set; }
 
         public CreateTicketCommand() { }
 

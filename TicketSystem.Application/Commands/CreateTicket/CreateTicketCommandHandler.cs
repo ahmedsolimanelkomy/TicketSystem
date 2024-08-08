@@ -11,7 +11,7 @@ using TicketSystem.Core.Interfaces;
 
 namespace TicketSystem.Application.Commands.CreateTicket
 {
-    public class CreateTicketCommandHandler : IRequestHandler<CreateTicketCommand>
+    public class CreateTicketCommandHandler : IRequestHandler<CreateTicketCommand,CreateTicketDTO>
     {
         private readonly ITicketService _ticketService;
 
@@ -20,14 +20,23 @@ namespace TicketSystem.Application.Commands.CreateTicket
             _ticketService = ticketService;
         }
 
-        public async Task Handle(CreateTicketCommand request, CancellationToken cancellationToken)
+        public async Task<CreateTicketDTO> Handle(CreateTicketCommand request, CancellationToken cancellationToken)
         {
-            CreateTicketDTO createTicketDTO = new CreateTicketDTO()
+            try
             {
-                MobileNumber = request.MobileNumber,
-                TicketImage = request.TicketImage,
-            };
-            await _ticketService.CreateTicketAsync(createTicketDTO);
+                CreateTicketDTO createTicketDTO = new()
+                {
+                    MobileNumber = request.MobileNumber,
+                    TicketImage = request.TicketImage,
+                };
+                await _ticketService.CreateTicketAsync(createTicketDTO);
+
+                return createTicketDTO;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while creating the ticket", ex);
+            }
         }
     }
 

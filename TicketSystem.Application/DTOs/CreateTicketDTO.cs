@@ -11,8 +11,7 @@ namespace TicketSystem.Application.DTOs
     public class CreateTicketDTO
     {
         [Required, Phone]
-        public string MobileNumber { get; set; }
-        [Required]
-        public IFormFile TicketImage { get; set; }
+        public string MobileNumber { get; set; } = string.Empty;
+        public required IFormFile TicketImage { get; set; }
     }
 }

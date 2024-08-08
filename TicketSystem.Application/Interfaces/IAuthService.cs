@@ -11,6 +11,6 @@ namespace TicketSystem.Application.Interfaces
     public interface IAuthService
     {
         Task<IdentityResult> RegisterAsync(RegisterRequestDTO request);
-        Task<string> AuthenticateAsync(LoginRequestDTO request);
+        Task<string?> AuthenticateAsync(LoginRequestDTO request);
     }
 }

@@ -9,7 +9,7 @@ namespace TicketSystem.Application.DTOs
 {
     public class UserDTO
     {
-        public string Name { get; set; }
-        public string MobileNumber { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string MobileNumber { get; set; } = string.Empty;
     }
 }

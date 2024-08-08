@@ -8,7 +8,7 @@ namespace TicketSystem.Application.DTOs
 {
     public class TicketDTO
     {
-        public string TicketNumber { get; set; }
-        public string TicketImageUrl { get; set; }
+        public string TicketNumber { get; set; } = string.Empty;
+        public string TicketImageUrl { get; set; } = string.Empty;
     }
 }

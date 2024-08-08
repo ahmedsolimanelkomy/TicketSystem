@@ -25,13 +25,13 @@ namespace TicketSystem.Application.Services
 
         public async Task<IdentityResult> RegisterAsync(RegisterRequestDTO request)
         {
-            var user = new ApplicationUser
+            ApplicationUser user = new()
             {
                 UserName = request.Email,
                 Email = request.Email
             };
 
-            var result = await _userManager.CreateAsync(user, request.Password);
+            IdentityResult result = await _userManager.CreateAsync(user, request.Password);
             if (result.Succeeded)
             {
                 await _userManager.AddToRoleAsync(user, "Admin");
@@ -40,13 +40,13 @@ namespace TicketSystem.Application.Services
             return result;
         }
 
-        public async Task<string> AuthenticateAsync(LoginRequestDTO request)
+        public async Task<string?> AuthenticateAsync(LoginRequestDTO request)
         {
-            var result = await _signInManager.PasswordSignInAsync(request.Email, request.Password, false, lockoutOnFailure: false);
+            SignInResult result = await _signInManager.PasswordSignInAsync(request.Email, request.Password, false, lockoutOnFailure: false);
             if (result.Succeeded)
             {
-                var user = await _userManager.FindByEmailAsync(request.Email);
-                var token = await _jwtTokenGenerator.GenerateTokenAsync(user);
+                ApplicationUser? user = await _userManager.FindByEmailAsync(request.Email);
+                string token = await _jwtTokenGenerator.GenerateTokenAsync(user);
                 return token;
             }
 

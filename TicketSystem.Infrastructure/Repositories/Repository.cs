@@ -36,7 +36,7 @@ namespace TicketSystem.Infrastructure.Repositories
             return await query.ToListAsync();
         }
 
-        public async Task<T> GetAsync(Expression<Func<T, bool>> filter, string[]? includeProperties = null)
+        public async Task<T?> GetAsync(Expression<Func<T, bool>> filter, string[]? includeProperties = null)
         {
             IQueryable<T> query = _dbSet;
 

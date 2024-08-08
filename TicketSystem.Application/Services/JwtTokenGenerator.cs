@@ -15,21 +15,21 @@ namespace TicketSystem.Application.Services
 {
     public class JwtTokenGenerator(IConfiguration configuration, UserManager<ApplicationUser> userManager) : IJwtTokenGenerator
     {
-        private readonly string _secretKey = configuration["JwtSettings:SecretKey"];
-        private readonly string _issuer = configuration["JwtSettings:Issuer"];
-        private readonly string _audience = configuration["JwtSettings:Audience"];
+        private readonly string? _secretKey = configuration["JwtSettings:SecretKey"];
+        private readonly string? _issuer = configuration["JwtSettings:Issuer"];
+        private readonly string? _audience = configuration["JwtSettings:Audience"];
 
-        public async Task<string> GenerateTokenAsync(ApplicationUser user)
+        public async Task<string> GenerateTokenAsync(ApplicationUser? user)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(_secretKey);
+            var key = Encoding.ASCII.GetBytes(_secretKey!);
 
-            var roles = await userManager.GetRolesAsync(user);
+            var roles = await userManager.GetRolesAsync(user!);
 
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, user.UserName),
-                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.Name, user?.UserName!),
+                new Claim(ClaimTypes.Email, user?.Email!),
             };
 
             foreach (var role in roles)

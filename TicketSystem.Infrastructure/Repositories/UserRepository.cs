@@ -12,7 +12,7 @@ namespace TicketSystem.Infrastructure.Repositories
 {
     public class UserRepository(TicketDbContext context) : Repository<User>(context), IUserRepository
     {
-        public async Task<User> GetByMobileNumberAsync(string mobileNumber)
+        public async Task<User?> GetByMobileNumberAsync(string mobileNumber)
         {
             if (string.IsNullOrWhiteSpace(mobileNumber))
             {

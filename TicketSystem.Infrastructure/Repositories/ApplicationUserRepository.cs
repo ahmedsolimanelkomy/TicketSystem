@@ -34,7 +34,7 @@ namespace TicketSystem.Infrastructure.Repositories
             }
         }
 
-        public async Task<ApplicationUser> GetByEmailAsync(string email)
+        public async Task<ApplicationUser?> GetByEmailAsync(string email)
         {
             return await _context.ApplicationUsers.SingleOrDefaultAsync(u => u.Email == email);
         }

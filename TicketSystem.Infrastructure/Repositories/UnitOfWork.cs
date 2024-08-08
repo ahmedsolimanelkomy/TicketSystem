@@ -11,6 +11,9 @@ namespace TicketSystem.Infrastructure.Repositories
 {
     public class UnitOfWork : IUnitOfWork
     {
+        public IUserRepository Users { get; private set; }
+        public ITicketRepository Tickets { get; private set; }
+
         private readonly TicketDbContext _context;
 
         public UnitOfWork(TicketDbContext context)
@@ -19,15 +22,10 @@ namespace TicketSystem.Infrastructure.Repositories
             Users = new UserRepository(context);
             Tickets = new TicketRepository(context);
         }
-
-        public IUserRepository Users { get; private set; }
-        public ITicketRepository Tickets { get; private set; }
-
         public async Task<int> CompleteAsync()
         {
             return await _context.SaveChangesAsync();
         }
-
         public void Dispose()
         {
             _context.Dispose();

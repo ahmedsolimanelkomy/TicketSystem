@@ -13,7 +13,7 @@ namespace TicketSystem.Infrastructure.Repositories
 {
     public class TicketRepository(TicketDbContext context) : Repository<Ticket>(context), ITicketRepository
     {
-        public async Task<IEnumerable<Ticket>> GetAllOrderedByTicketNumberDescAsync(string[]? includeProperties = null)
+        public async Task<IEnumerable<Ticket?>> GetAllOrderedByTicketNumberDescAsync(string[]? includeProperties = null)
         {
             IQueryable<Ticket> query = _context.Tickets.OrderByDescending(t => t.TicketNumber);
 
@@ -28,7 +28,7 @@ namespace TicketSystem.Infrastructure.Repositories
             return await query.ToListAsync();
         }
 
-        public async Task<Ticket> GetByUserMobileNumberAsync(string mobileNumber)
+        public async Task<Ticket?> GetByUserMobileNumberAsync(string mobileNumber)
         {
             if (string.IsNullOrWhiteSpace(mobileNumber))
             {

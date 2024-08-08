@@ -8,7 +8,7 @@ using TicketSystem.Application.Interfaces;
 
 namespace TicketSystem.Application.Commands.Login
 {
-    public class LoginCommandHandler : IRequestHandler<LoginCommand, string>
+    public class LoginCommandHandler : IRequestHandler<LoginCommand, string?>
     {
         private readonly IAuthService _authService;
 
@@ -17,7 +17,7 @@ namespace TicketSystem.Application.Commands.Login
             _authService = authService;
         }
 
-        public async Task<string> Handle(LoginCommand command, CancellationToken cancellationToken)
+        public async Task<string?> Handle(LoginCommand command, CancellationToken cancellationToken)
         {
             return await _authService.AuthenticateAsync(command.Request);
         }

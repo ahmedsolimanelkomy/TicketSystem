@@ -10,6 +10,6 @@ namespace TicketSystem.Application.Interfaces
 {
     public interface IJwtTokenGenerator
     {
-        Task<string> GenerateTokenAsync(ApplicationUser user);
+        Task<string> GenerateTokenAsync(ApplicationUser? user);
     }
 }

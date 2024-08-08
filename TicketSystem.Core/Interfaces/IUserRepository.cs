@@ -9,6 +9,6 @@ namespace TicketSystem.Core.Interfaces
 {
     public interface IUserRepository : IRepository<User>
     {
-        Task<User> GetByMobileNumberAsync(string mobileNumber);
+        Task<User?> GetByMobileNumberAsync(string mobileNumber);
     }
 }

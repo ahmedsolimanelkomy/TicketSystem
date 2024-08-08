@@ -11,6 +11,6 @@ namespace TicketSystem.Application.Interfaces
     {
         Task CreateTicketAsync(CreateTicketDTO createTicketDto);
         Task<IEnumerable<TicketDTO>> GetAllTicketsAsync();
-        Task<TicketDTO> GetUserTicketByMobileNumberAsync(string MobileNumber);
+        Task<TicketDTO?> GetUserTicketByMobileNumberAsync(string MobileNumber);
     }
 }

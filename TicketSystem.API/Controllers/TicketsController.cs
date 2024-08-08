@@ -36,7 +36,7 @@ namespace TicketSystem.API.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(new { ex.Message });
+                return BadRequest(new { ex?.InnerException?.Message });
             }
         }
 
