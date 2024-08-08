@@ -32,11 +32,19 @@ namespace TicketSystem.API.Controllers
             try
             {
                 await _mediator.Send(command);
-                return CreatedAtAction(nameof(GetUserTicket), new { mobileNumber = command.MobileNumber }, command);
+                return CreatedAtAction(nameof(GetUserTicketByMobileNumber), new { mobileNumber = command.MobileNumber }, command);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(new { ex.Message });
+            }
+            catch(InvalidOperationException ex)
+            {
+                return BadRequest(new { ex.Message });
             }
             catch (Exception ex)
             {
-                return BadRequest(new { ex?.InnerException?.Message });
+                return StatusCode(500, new { Message = "An error occurred while creating the ticket.", Details = ex.Message });
             }
         }
 
@@ -49,7 +57,7 @@ namespace TicketSystem.API.Controllers
                 var tickets = await _mediator.Send(query);
                 if (tickets == null || !tickets.Any())
                 {
-                    return NotFound(new { Message = "No tickets found." });
+                    return NotFound(new { Message = "No tickets found" });
                 }
                 return Ok(tickets);
             }
@@ -59,8 +67,8 @@ namespace TicketSystem.API.Controllers
             }
         }
 
-        [HttpGet("GetUserTicket")]
-        public async Task<IActionResult> GetUserTicket([FromQuery] string mobileNumber)
+        [HttpGet("GetUserTicketByMobileNumber")]
+        public async Task<IActionResult> GetUserTicketByMobileNumber([FromQuery] string mobileNumber)
         {
             if (string.IsNullOrWhiteSpace(mobileNumber))
             {
@@ -76,6 +84,10 @@ namespace TicketSystem.API.Controllers
                     return NotFound(new { Message = "Ticket not found for the provided mobile number" });
                 }
                 return Ok(ticket);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return BadRequest(ex.Message);
             }
             catch (Exception ex)
             {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qir6s4dWVp5Zqi3BuINvW1LMlMzbQKSgJnCWwvatbjT3ax525m4J8kIyzKz4UKZWW7xY0vZfe2MYHVX72P2fvA==",
+  "dgSpecHash": "fyGlCNBTK4BqB5zL0A9KbKfS3QIfeAX+PD2Gia6SZtMK0MMRwfmYGjK9qmZF0XFkxmv/YaM32I1pYURTzpE9gQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Core\\TicketSystem.Core.csproj",
+  "projectFilePath": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem\\TicketSystem.Core\\TicketSystem.Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

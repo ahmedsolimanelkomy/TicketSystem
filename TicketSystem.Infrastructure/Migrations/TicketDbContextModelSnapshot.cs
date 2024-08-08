@@ -142,7 +142,6 @@ namespace TicketSystem.Infrastructure.Migrations
 
                     b.Property<string>("TicketNumber")
                         .IsRequired()
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("UserId")

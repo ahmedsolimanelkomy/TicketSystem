@@ -1,14 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TicketSystem.Core.Entities;
 using TicketSystem.Core.Interfaces;
 using TicketSystem.Infrastructure.Data;
-using TicketSystem.Infrastructure.Migrations;
-
 namespace TicketSystem.Infrastructure.Repositories
 {
     public class TicketRepository(TicketDbContext context) : Repository<Ticket>(context), ITicketRepository

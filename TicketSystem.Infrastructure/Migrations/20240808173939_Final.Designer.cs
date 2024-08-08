@@ -12,8 +12,8 @@ using TicketSystem.Infrastructure.Data;
 namespace TicketSystem.Infrastructure.Migrations
 {
     [DbContext(typeof(TicketDbContext))]
-    [Migration("20240807004151_init")]
-    partial class init
+    [Migration("20240808173939_Final")]
+    partial class Final
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -178,6 +178,68 @@ namespace TicketSystem.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            MobileNumber = "123-456-7890",
+                            Name = "ahmed"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            MobileNumber = "234-567-8901",
+                            Name = "mahmoud"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            MobileNumber = "345-678-9012",
+                            Name = "Ali"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            MobileNumber = "456-789-0123",
+                            Name = "mostafa"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            MobileNumber = "567-890-1234",
+                            Name = "kareem"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            MobileNumber = "678-901-2345",
+                            Name = "dina"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            MobileNumber = "789-012-3456",
+                            Name = "yara"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            MobileNumber = "890-123-4567",
+                            Name = "nada"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            MobileNumber = "901-234-5678",
+                            Name = "sara"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            MobileNumber = "012-345-6789",
+                            Name = "yasmeen"
+                        });
                 });
 
             modelBuilder.Entity("TicketSystem.Infrastructure.Identity.ApplicationRole", b =>

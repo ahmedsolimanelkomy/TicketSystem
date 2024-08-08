@@ -64,8 +64,8 @@
   },
   {
     "ContainingType": "TicketSystem.API.Controllers.TicketsController",
-    "Method": "GetUserTicket",
-    "RelativePath": "api/Tickets/GetUserTicket",
+    "Method": "GetUserTicketByMobileNumber",
+    "RelativePath": "api/Tickets/GetUserTicketByMobileNumber",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

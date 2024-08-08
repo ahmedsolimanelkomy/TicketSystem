@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k/JW5HgPqZ+kX4ff8eTuSWBeA1sBTd4HeKfDNBvXrxfvIkA0oxCBcnhjbnVl1C/jdjz/CzU8kHoCaCfsXIB1fA==",
+  "dgSpecHash": "2qS0iIbUH1rF7yoNGPtwCzircqHYYsaBXd+eEJEQoPM7qhmF76eQRkAsg9BevbtTchM7jiKuia1gHIrSAHO1Iw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem.Core\\TicketSystem.Application\\TicketSystem.Application.csproj",
+  "projectFilePath": "C:\\Users\\ahmed\\Desktop\\Cyrus Task\\TicketSystem\\TicketSystem.Application\\TicketSystem.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ahmed\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\ahmed\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

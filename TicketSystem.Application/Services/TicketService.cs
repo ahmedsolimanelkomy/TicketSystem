@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Sockets;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 using TicketSystem.Application.DTOs;
@@ -27,38 +28,23 @@ namespace TicketSystem.Application.Services
 
         public async Task CreateTicketAsync(CreateTicketDTO createTicketDto)
         {
-            try
+            User user = await _unitOfWork.Users.GetByMobileNumberAsync(createTicketDto.MobileNumber)
+                         ?? throw new KeyNotFoundException("User not found for the provided mobile number");
+
+            if (user.Ticket != null)
             {
-                if (createTicketDto == null)
-                {
-                    throw new ArgumentNullException(nameof(createTicketDto), "CreateTicketDTO cannot be null");
-                }
-
-                User user = await _unitOfWork.Users.GetByMobileNumberAsync(createTicketDto.MobileNumber) ?? throw new KeyNotFoundException("User not found");
-                
-                if (user.Ticket != null)
-                {
-                    throw new InvalidOperationException("User already has a ticket");
-                }
-
-                Ticket ticket = _mapper.Map<Ticket>(createTicketDto);
-                ticket.TicketNumber = Guid.NewGuid().ToString();
-                ticket.UserId = user.Id;
-
-                string imageName = await SaveTicketImageAsync(createTicketDto?.TicketImage!, ticket.TicketNumber);
-                ticket.TicketImageUrl = imageName;
-
-                await _unitOfWork.Tickets.AddAsync(ticket);
-                await _unitOfWork.CompleteAsync();
+                throw new InvalidOperationException("The user already has an existing ticket");
             }
-            catch (InvalidOperationException ex)
-            {
-                throw new Exception(ex.Message, ex);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("An error occurred while creating the ticket: " + ex.Message, ex);
-            }
+
+            Ticket ticket = _mapper.Map<Ticket>(createTicketDto);
+            ticket.TicketNumber = Guid.NewGuid().ToString();
+            ticket.UserId = user.Id;
+
+            string imageName = await SaveTicketImageAsync(createTicketDto.TicketImage, ticket.TicketNumber);
+            ticket.TicketImageUrl = imageName;
+
+            await _unitOfWork.Tickets.AddAsync(ticket);
+            await _unitOfWork.CompleteAsync();
         }
         public async Task<IEnumerable<TicketDTO>> GetAllTicketsAsync()
         {
@@ -84,26 +70,17 @@ namespace TicketSystem.Application.Services
         }
         public async Task<TicketDTO?> GetUserTicketByMobileNumberAsync(string MobileNumber)
         {
-            try
-            {
-                Ticket? Tickets = await _unitOfWork.Tickets.GetAsync(ticket => ticket.User.MobileNumber == MobileNumber, ["User"]);
+                User? user = await _unitOfWork.Users.GetAsync(U => U.MobileNumber == MobileNumber) ?? throw new KeyNotFoundException("Invalid User Mobile Number");
 
-                if (Tickets == null)
+                Ticket? Ticket = await _unitOfWork.Tickets.GetAsync(ticket => ticket.User.MobileNumber == MobileNumber, ["User"]);                
+                
+                if (Ticket == null)
                 {
                     return null;
                 }
 
-                TicketDTO TicketsDto = _mapper.Map<TicketDTO>(Tickets);
-                return TicketsDto;
-            }
-            catch (InvalidOperationException ex)
-            {
-                throw new Exception("Operation failed: " + ex.Message, ex);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("An error occurred while retrieving tickets: " + ex.Message, ex);
-            }
+                TicketDTO TicketsDto = _mapper.Map<TicketDTO>(Ticket);
+                return TicketsDto;  
         }
         private static System.Drawing.Imaging.ImageCodecInfo GetEncoder(System.Drawing.Imaging.ImageFormat format)
         {

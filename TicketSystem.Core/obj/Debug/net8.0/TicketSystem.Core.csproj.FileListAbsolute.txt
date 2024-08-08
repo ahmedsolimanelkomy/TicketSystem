@@ -10,3 +10,15 @@ C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem.Core\TicketSystem.Core\obj\Debug\
 C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem.Core\TicketSystem.Core\obj\Debug\net8.0\refint\TicketSystem.Core.dll
 C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem.Core\TicketSystem.Core\obj\Debug\net8.0\TicketSystem.Core.pdb
 C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem.Core\TicketSystem.Core\obj\Debug\net8.0\ref\TicketSystem.Core.dll
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem\TicketSystem.Core\bin\Debug\net8.0\TicketSystem.Core.deps.json
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem\TicketSystem.Core\bin\Debug\net8.0\TicketSystem.Core.dll
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem\TicketSystem.Core\bin\Debug\net8.0\TicketSystem.Core.pdb
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem\TicketSystem.Core\obj\Debug\net8.0\TicketSystem.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem\TicketSystem.Core\obj\Debug\net8.0\TicketSystem.Core.AssemblyInfoInputs.cache
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem\TicketSystem.Core\obj\Debug\net8.0\TicketSystem.Core.AssemblyInfo.cs
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem\TicketSystem.Core\obj\Debug\net8.0\TicketSystem.Core.csproj.CoreCompileInputs.cache
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem\TicketSystem.Core\obj\Debug\net8.0\TicketSystem.Core.sourcelink.json
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem\TicketSystem.Core\obj\Debug\net8.0\TicketSystem.Core.dll
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem\TicketSystem.Core\obj\Debug\net8.0\refint\TicketSystem.Core.dll
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem\TicketSystem.Core\obj\Debug\net8.0\TicketSystem.Core.pdb
+C:\Users\ahmed\Desktop\Cyrus Task\TicketSystem\TicketSystem.Core\obj\Debug\net8.0\ref\TicketSystem.Core.dll
